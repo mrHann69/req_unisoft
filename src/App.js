@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Encabezado from './Encabezado';
+import ComponenteHijo from './ComponenteHijo';
+import './estilos.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+	let arreglo = [9,8,4,5,6,7,1,9]
+	
+
+	return (
+		<div className="grid">
+			<Encabezado/>
+			
+			<ComponenteHijo texto={arreglo[0]} />
+			<ComponenteHijo texto={arreglo[1]} />
+			<ComponenteHijo texto={arreglo[2]} />
+			<ComponenteHijo texto={arreglo[3]} />
+			<ComponenteHijo texto={arreglo[4]} />
+			<ComponenteHijo texto={arreglo[5]} />
+			<ComponenteHijo texto={arreglo[6]} />
+			<ComponenteHijo texto={arreglo[7]} />
+			
+		</div>
+	);
 }
-
+ 
 export default App;
