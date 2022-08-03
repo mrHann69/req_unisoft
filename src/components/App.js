@@ -6,13 +6,13 @@ import { subArreglos } from '../hooks/useSubArreglos.js';
 
 const App = () => {
 
-	let arreglo = [9,8,4,5,6,7,1,9];
+	let arreglo = [9,8,4,5,6,7,1,9]; //[1,4567899]
 	let rangos = subArreglos(arreglo);
-
 	return (
 		<div className="grid">
 			<Encabezado/>
-			{rangos.map(cmp => <ComponenteHijo texto={cmp} />)}			
+			{rangos.map(cmp => <ComponenteHijo texto={cmp} />)}
+			
 		</div>
 	);
 }
